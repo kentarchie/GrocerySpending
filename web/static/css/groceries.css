@@ -1,0 +1,122 @@
+* {
+	margin: 0;
+}
+
+html, body {
+   padding:0;
+	height: 100%;
+}
+
+label { font-weight: bold; font-variant: small-caps; }
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+/*	margin: 0 auto -5em; */ /* the bottom margin is the negative value of the footer's height */
+}
+
+#header {
+    padding:2px;
+    background:#5ee;
+}
+
+#content {
+    padding:10px;
+    padding-bottom:3em; /* Height of the footer element */
+}
+
+.footer {
+    border:1px solid green;
+    clear:both;
+    width:100%;
+    height:3em;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
+.container { float:left; }
+
+.center     { width:95%; margin-left: auto; margin-right:auto;}
+.copyright  { font-size :  small; width: 95%; margin-left: auto; margin-right:auto;}
+
+#titleblock {  
+               text-align:center; 
+				   font-weight: bold; font-size:large; color:red;
+            }
+#logoblock  { float:left; top: 0px; left: 0px;}
+.catList  { float:left;}
+
+#commandBlock { width: 70%; clear:both; margin-left: auto; margin-right: auto; }
+
+.fakelink  { color:blue; cursor:pointer;}
+
+.itemsTable { 
+    /* width: 40%; */
+    float: left; 
+    border-collapse: collapse; 
+    empty-cells: show;
+}
+
+.formBox { 
+    float:left;
+    clear:right;
+    border: 1px solid red;
+    width: 60%;
+}
+
+#addItem { margin-left: 3em;}
+
+/* located in demo.css and creates a little calendar icon
+ * instead of a text link for "Choose date"
+ */
+a.dp-choose-date {
+	float: left;
+	width: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 5px 3px 0;
+	display: block;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url(images/calendar.png) no-repeat; 
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+/* makes the input field shorter once the date picker code
+ * has run (to allow space for the calendar icon
+ */
+newDate.dp-applied {
+	width: 140px;
+	float: left;
+}
+
+.tagList { 
+    width:20em; border: 1px solid green;
+}
+
+.tagAdd { }
+.tagAdd input { float: left;}
+
+/* drag and drag stuff */
+.categorySource { 
+    float: left;
+    width: 20em;
+    height: 300px;
+    overflow: scroll; 
+    margin-right: 15px; 
+    padding-right: 15px; padding-top: 5px;
+    background: white; 
+} 
+.categorySource ul li { 
+    list-style-type: none; 
+    cursor:pointer;
+ }
+.categorySource p { font-weight: bold; font-variant: small-caps;}
+
+#itemsTbody td:nth-child(5) { 
+    background-color:beige; font-variant: small-caps; 
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,2975 @@
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 2.59,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Yogurt",
+    "store" : "Family Foods",
+    "price" : 5.99,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream",
+    "store" : "Family Foods",
+    "price" : 4.89,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Orange Juice",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Family Foods",
+    "price" : 2.39,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.98,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Maple Syrup",
+    "store" : "Family Foods",
+    "price" : 5.49,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Dried Plums",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Chicken Thighs",
+    "store" : "Family Foods",
+    "price" : 3.41,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Apples",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Apples",
+    "store" : "Family Foods",
+    "price" : 1.31,
+    "date" : "2014-04-07",
+    "categories" : ""
+}
+{
+    "item" : "Bananas",
+    "store" : "Walmart",
+    "price" : 1.02,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Canned Fruit",
+    "store" : "Walmart",
+    "price" : 3.47,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Dog Food",
+    "store" : "Walmart",
+    "price" : 4.55,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Chicken",
+    "store" : "Walmart",
+    "price" : 8.7,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches of Oats",
+    "store" : "Walmart",
+    "price" : 3.98,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "tuna",
+    "store" : "Walmart",
+    "price" : 1.56,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "straws",
+    "store" : "Walmart",
+    "price" : 1,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Chips",
+    "store" : "Walmart",
+    "price" : 2.68,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Hershey Chocolate",
+    "store" : "Walmart",
+    "price" : 3.28,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Kit Kat Bag",
+    "store" : "Walmart",
+    "price" : 2.88,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Hershey Chocolate",
+    "store" : "Walmart",
+    "price" : 3.28,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Scrubbers",
+    "store" : "Walmart",
+    "price" : 0.98,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Printer Ink",
+    "store" : "Walmart",
+    "price" : 12.97,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Canned Pears",
+    "store" : "Walmart",
+    "price" : 1.88,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Spaghetti",
+    "store" : "Walmart",
+    "price" : 1.96,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3.94,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Turkey",
+    "store" : "Walmart",
+    "price" : 2.84,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Cheese",
+    "store" : "Walmart",
+    "price" : 2.44,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches of Oats",
+    "store" : "Walmart",
+    "price" : 3.98,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Eggs",
+    "store" : "Walmart",
+    "price" : 1.98,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "TP",
+    "store" : "Walmart",
+    "price" : 6.47,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Sauce",
+    "store" : "Walmart",
+    "price" : 4.36,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Canned Peaches",
+    "store" : "Walmart",
+    "price" : 1.76,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 3.49,
+    "date" : "2014-04-12",
+    "categories" : ""
+}
+{
+    "item" : "Hot Dogs",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Soup",
+    "store" : "Target",
+    "price" : 0.75,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Target",
+    "price" : 1.29,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Bread",
+    "store" : "Target",
+    "price" : 1.79,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream",
+    "store" : "Target",
+    "price" : 2.29,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Pizza",
+    "store" : "Target",
+    "price" : 9.18,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 0.35,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : -1.06,
+    "date" : "2014-04-18",
+    "categories" : ""
+}
+{
+    "item" : "Pizzas",
+    "store" : "Target",
+    "price" : 9.18,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Junk",
+    "store" : "Target",
+    "price" : 4.88,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Card",
+    "store" : "Target",
+    "price" : 4,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 0.87,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : -0.9,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "unk",
+    "store" : "Walmart",
+    "price" : 3.68,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Soda",
+    "store" : "Walmart",
+    "price" : 0.84,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Mayo",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Peanut Butter",
+    "store" : "Walmart",
+    "price" : 2.78,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Orange Juice",
+    "store" : "Walmart",
+    "price" : 2.68,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Eggs",
+    "store" : "Walmart",
+    "price" : 2.28,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "oreos",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "cream cheese",
+    "store" : "Walmart",
+    "price" : 2.38,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "1/2&amp;1/2",
+    "store" : "Walmart",
+    "price" : 2.28,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmart",
+    "price" : 4,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "choc chips",
+    "store" : "Walmart",
+    "price" : 3.76,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmart",
+    "price" : 1.76,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "peaches",
+    "store" : "Walmart",
+    "price" : 0.88,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "alfredo sauce",
+    "store" : "Walmart",
+    "price" : 2.58,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "pears",
+    "store" : "Walmart",
+    "price" : 0.88,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "rolls",
+    "store" : "Walmart",
+    "price" : 2.12,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "berries",
+    "store" : "Walmart",
+    "price" : 1.5,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 1.01,
+    "date" : "2014-04-19",
+    "categories" : ""
+}
+{
+    "item" : "Deli Meal",
+    "store" : "Family Foods",
+    "price" : 4.49,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Salad",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Cheez-it",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "water",
+    "store" : "Family Foods",
+    "price" : 1.96,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "cookies",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "cookies",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Choc powder",
+    "store" : "Family Foods",
+    "price" : 7.89,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "coke",
+    "store" : "Family Foods",
+    "price" : 1.79,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Apples",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Apples",
+    "store" : "Family Foods",
+    "price" : 3.35,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "taffy apple",
+    "store" : "Family Foods",
+    "price" : 3.29,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.68,
+    "date" : "2014-04-23",
+    "categories" : ""
+}
+{
+    "item" : "choc chips",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "milk",
+    "store" : "Family Foods",
+    "price" : 5.18,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "caramel chips",
+    "store" : "Family Foods",
+    "price" : 2.89,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "coffee",
+    "store" : "Family Foods",
+    "price" : 15.29,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "coffee",
+    "store" : "Family Foods",
+    "price" : 15.29,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "crackers",
+    "store" : "Family Foods",
+    "price" : 4.69,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "nuts",
+    "store" : "Family Foods",
+    "price" : 2.79,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "smores",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "marshmallow",
+    "store" : "Family Foods",
+    "price" : 1.29,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "Bananas",
+    "store" : "Family Foods",
+    "price" : 1.27,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "berries",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "block salt",
+    "store" : "Family Foods",
+    "price" : 16.76,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-04-25",
+    "categories" : ""
+}
+{
+    "item" : "pepsi",
+    "store" : "Walmart",
+    "price" : 4.28,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "coke",
+    "store" : "Walmart",
+    "price" : 3.94,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches of Oats",
+    "store" : "Walmart",
+    "price" : 3.98,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "cheerios",
+    "store" : "Walmart",
+    "price" : 3.24,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "chips",
+    "store" : "Walmart",
+    "price" : 2.68,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "Chicken",
+    "store" : "Walmart",
+    "price" : 9.51,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "rolls",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "a1",
+    "store" : "Walmart",
+    "price" : 2.5,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "ready whip",
+    "store" : "Walmart",
+    "price" : 3.48,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "berries",
+    "store" : "Walmart",
+    "price" : 3.88,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "zuchini",
+    "store" : "Walmart",
+    "price" : 1.58,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "turkey",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 1.3,
+    "date" : "2014-04-27",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 2.59,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 2.59,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Grease",
+    "store" : "Family Foods",
+    "price" : 3.99,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Grease",
+    "store" : "Family Foods",
+    "price" : 3.99,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Cooked Chips",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Bacon",
+    "store" : "Family Foods",
+    "price" : 5.49,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Family Foods",
+    "price" : 2.44,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Romaine Lettuce",
+    "store" : "Family Foods",
+    "price" : 1.69,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Yellow Onions",
+    "store" : "Family Foods",
+    "price" : 2.29,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Green Peppers",
+    "store" : "Family Foods",
+    "price" : 0.59,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Tomatoes",
+    "store" : "Family Foods",
+    "price" : 1.43,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Softener Salt",
+    "store" : "Family Foods",
+    "price" : 16.76,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 2.23,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 5.4,
+    "date" : "2014-05-27",
+    "categories" : ""
+}
+{
+    "item" : "Battery",
+    "store" : "Target",
+    "price" : 6.99,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Kit-Kat",
+    "store" : "Target",
+    "price" : 5.32,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Twizzler",
+    "store" : "Target",
+    "price" : 1.84,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Deli",
+    "store" : "Target",
+    "price" : 2.69,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Turkey",
+    "store" : "Target",
+    "price" : 2.69,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Gevalia",
+    "store" : "Target",
+    "price" : 5.49,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Strawberries",
+    "store" : "Target",
+    "price" : 2,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Target",
+    "price" : 3.99,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Crest Whitening",
+    "store" : "Target",
+    "price" : 22.49,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 2.77,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 2.69,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Frap",
+    "store" : "Walmart",
+    "price" : 5.48,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Turkey",
+    "store" : "Walmart",
+    "price" : 5.48,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "bacon jerky",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Berries",
+    "store" : "Walmart",
+    "price" : 3.88,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Outside Bird Food",
+    "store" : "Walmart",
+    "price" : 19.88,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Lawn Food",
+    "store" : "Walmart",
+    "price" : 9.97,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Bananas",
+    "store" : "Walmart",
+    "price" : 0.64,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Batteries",
+    "store" : "Walmart",
+    "price" : 4.97,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "GB Ultmt",
+    "store" : "Walmart",
+    "price" : 8.47,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Grass Seed",
+    "store" : "Walmart",
+    "price" : 13.44,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 4.53,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Donuts",
+    "store" : "Family Foods",
+    "price" : 0.99,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Donuts",
+    "store" : "Family Foods",
+    "price" : 3.49,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Ranch Dressing",
+    "store" : "Family Foods",
+    "price" : 2.5,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "BBQ Air Pops",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Potatoes",
+    "store" : "Family Foods",
+    "price" : 1.69,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.22,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 2.19,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Bread",
+    "store" : "Walmart",
+    "price" : 1.68,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Bird Treat",
+    "store" : "Walmart",
+    "price" : 1.12,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Walmart",
+    "price" : 2.78,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmart",
+    "price" : 2,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmart",
+    "price" : 2,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Canned Peaches",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Canned Pears",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Bird Food",
+    "store" : "Walmart",
+    "price" : 3.97,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Cascade Diswasher soap",
+    "store" : "Walmart",
+    "price" : 5.97,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Spaghetti",
+    "store" : "Walmart",
+    "price" : 1.28,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Spaghetti",
+    "store" : "Walmart",
+    "price" : 1.28,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Pepsi",
+    "store" : "Walmart",
+    "price" : 4.28,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Sliced Turkey",
+    "store" : "Walmart",
+    "price" : 5.48,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Raspberry Preserves",
+    "store" : "Walmart",
+    "price" : 3.26,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 2.48,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 2.12,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Peanut Butter",
+    "store" : "Walmart",
+    "price" : 3.47,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Yogurt",
+    "store" : "Walmart",
+    "price" : 4.98,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Pert Shampoo",
+    "store" : "Walmart",
+    "price" : 2.88,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 2.14,
+    "date" : "2014-07-05",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Chips",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Club Crackers",
+    "store" : "Target",
+    "price" : 2.54,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Brie Wheel",
+    "store" : "Target",
+    "price" : 4.29,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Target",
+    "price" : 4.99,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Pepsi",
+    "store" : "Target",
+    "price" : 3.59,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Pepsi",
+    "store" : "Target",
+    "price" : 1.49,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Cosmetics",
+    "store" : "Target",
+    "price" : 4.59,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "UP Bath",
+    "store" : "Target",
+    "price" : 3.99,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "UP Bath",
+    "store" : "Target",
+    "price" : 6.79,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Outside Bird Food",
+    "store" : "Target",
+    "price" : 11.49,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 3.15,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 2.34,
+    "date" : "2014-05-30",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Walmart",
+    "price" : 3.36,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Lawn Mower wheel",
+    "store" : "Walmart",
+    "price" : 6.97,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Outside Bird Food",
+    "store" : "Walmart",
+    "price" : 8.47,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Banannas",
+    "store" : "Walmart",
+    "price" : 0.8,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches Of Oats",
+    "store" : "Walmart",
+    "price" : 2.94,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3.94,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Vanilla Ice Cream",
+    "store" : "Walmart",
+    "price" : 3.87,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 1.8,
+    "date" : "2014-05-24",
+    "categories" : ""
+}
+{
+    "item" : "Bird Seed",
+    "store" : "Target",
+    "price" : 5.99,
+    "date" : "2014-06-06",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 0.48,
+    "date" : "2014-06-06",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 0.3,
+    "date" : "2014-06-06",
+    "categories" : ""
+}
+{
+    "item" : "Chocolate Nuggets",
+    "store" : "Target",
+    "price" : 2.89,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Chips",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Fritos",
+    "store" : "Target",
+    "price" : 3.59,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Pretzels",
+    "store" : "Target",
+    "price" : 0.99,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Fruit Newtons",
+    "store" : "Target",
+    "price" : 3.69,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Lunch Turkey",
+    "store" : "Target",
+    "price" : 3.69,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Sausage",
+    "store" : "Target",
+    "price" : 2.79,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Mustard",
+    "store" : "Target",
+    "price" : 2.44,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Tortillos",
+    "store" : "Target",
+    "price" : 1.19,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Target",
+    "price" : 2.79,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Target",
+    "price" : 2.79,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Bread",
+    "store" : "Target",
+    "price" : 2.39,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Raisins",
+    "store" : "Target",
+    "price" : 3.09,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Ground Beef",
+    "store" : "Target",
+    "price" : 5.49,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Corn",
+    "store" : "Target",
+    "price" : 0.89,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Pillsbury Mix",
+    "store" : "Target",
+    "price" : 1.5,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Pillsbury Mix",
+    "store" : "Target",
+    "price" : 1.5,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Target",
+    "price" : 7.99,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Target",
+    "price" : 3.19,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Cottage Cheese",
+    "store" : "Target",
+    "price" : 1.59,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Pudding",
+    "store" : "Target",
+    "price" : 2.79,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Salsa",
+    "store" : "Target",
+    "price" : 2.89,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Salad",
+    "store" : "Target",
+    "price" : 4.99,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 2.5,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 3.74,
+    "date" : "2014-06-09",
+    "categories" : ""
+}
+{
+    "item" : "Cookies",
+    "store" : "Walmart",
+    "price" : 2.5,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Chips",
+    "store" : "Walmart",
+    "price" : 2.68,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Raisins",
+    "store" : "Walmart",
+    "price" : 3,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Raisinettes",
+    "store" : "Walmart",
+    "price" : 0.98,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Dental Floss",
+    "store" : "Walmart",
+    "price" : 0.97,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pizza",
+    "store" : "Walmart",
+    "price" : 4.57,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pizza",
+    "store" : "Walmart",
+    "price" : 4.57,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Turkey",
+    "store" : "Walmart",
+    "price" : 4.98,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Cheddar Cheese",
+    "store" : "Walmart",
+    "price" : 2.44,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 2.12,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Dried Cilantro",
+    "store" : "Walmart",
+    "price" : 3.42,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Canned Fruit",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Canned Fruit",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 2.12,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Paprika",
+    "store" : "Walmart",
+    "price" : 2.66,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Orange Marmalade",
+    "store" : "Walmart",
+    "price" : 2.54,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Walmart",
+    "price" : 4.58,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmart",
+    "price" : 0.98,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmart",
+    "price" : 0.98,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmart",
+    "price" : 2,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3.94,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 1.33,
+    "date" : "2014-05-03",
+    "categories" : ""
+}
+{
+    "item" : "Paper Towels",
+    "store" : "Walmart",
+    "price" : 3.64,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Bread",
+    "store" : "Walmart",
+    "price" : 1.68,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Bread",
+    "store" : "Walmart",
+    "price" : 1.68,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Buns",
+    "store" : "Walmart",
+    "price" : 2.32,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches Of Oats",
+    "store" : "Walmart",
+    "price" : 3.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches Of Oats",
+    "store" : "Walmart",
+    "price" : 3.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Cheerios",
+    "store" : "Walmart",
+    "price" : 3.77,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Walmart",
+    "price" : 4.58,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Hangers",
+    "store" : "Walmart",
+    "price" : 1.17,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Hangers",
+    "store" : "Walmart",
+    "price" : 1.17,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Coconut",
+    "store" : "Walmart",
+    "price" : 0.94,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Domestic",
+    "store" : "Walmart",
+    "price" : 3.68,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Garbage Bags",
+    "store" : "Walmart",
+    "price" : 7.48,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Kettle Chips",
+    "store" : "Walmart",
+    "price" : 2.68,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Cream Cheese",
+    "store" : "Walmart",
+    "price" : 2.58,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Oreos",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Kit Kats",
+    "store" : "Walmart",
+    "price" : 3.24,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Cookies",
+    "store" : "Walmart",
+    "price" : 1.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Sliced Turkey",
+    "store" : "Walmart",
+    "price" : 2.84,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Hot Dogs",
+    "store" : "Walmart",
+    "price" : 6.24,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmart",
+    "price" : 2,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "KNB BS BF",
+    "store" : "Walmart",
+    "price" : 4.88,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Aspirin",
+    "store" : "Walmart",
+    "price" : 3.64,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "LHS",
+    "store" : "Walmart",
+    "price" : 0.98,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Bird Food",
+    "store" : "Walmart",
+    "price" : 2.37,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Dog Food",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Dog Food",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Dog Food",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Dog Food",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Tomato Paste",
+    "store" : "Walmart",
+    "price" : 0.56,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Tomato Paste",
+    "store" : "Walmart",
+    "price" : 0.56,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Pizza Pan",
+    "store" : "Walmart",
+    "price" : 0.92,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Pizza Pan",
+    "store" : "Walmart",
+    "price" : 0.92,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Pepsi",
+    "store" : "Walmart",
+    "price" : 4.28,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 4.45,
+    "date" : "2014-04-05",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Walmart",
+    "price" : 2.78,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches Of Oats",
+    "store" : "Walmart",
+    "price" : 2.92,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Banannas",
+    "store" : "Walmart",
+    "price" : 1.33,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Chocolate Chips",
+    "store" : "Walmart",
+    "price" : 1.88,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Chocolate Chips",
+    "store" : "Walmart",
+    "price" : 1.88,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmart",
+    "price" : 1,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmart",
+    "price" : 1,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 1.88,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmart",
+    "price" : 2.12,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Canned Fruit",
+    "store" : "Walmart",
+    "price" : 1.18,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Canned Fruit",
+    "store" : "Walmart",
+    "price" : 1,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Sugar",
+    "store" : "Walmart",
+    "price" : 2.48,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Pizza",
+    "store" : "Walmart",
+    "price" : 4.57,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "TP",
+    "store" : "Walmart",
+    "price" : 5.68,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Oreos",
+    "store" : "Walmart",
+    "price" : 2.98,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmart",
+    "price" : 3.94,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmart",
+    "price" : 1.41,
+    "date" : "2014-05-18",
+    "categories" : ""
+}
+{
+    "item" : "Cottage Cheese",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Pudding",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream Sandwiches",
+    "store" : "Family Foods",
+    "price" : 4.99,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Beef Sticks",
+    "store" : "Family Foods",
+    "price" : 0.89,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Salsa",
+    "store" : "Family Foods",
+    "price" : 2.79,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.25,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 1.2,
+    "date" : "2014-06-14",
+    "categories" : ""
+}
+{
+    "item" : "Raspberry Iced Tea",
+    "store" : "Jewel",
+    "price" : 4.29,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Peanuts",
+    "store" : "Jewel",
+    "price" : 3.49,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Jewel",
+    "price" : 2.59,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Toothpaste",
+    "store" : "Jewel",
+    "price" : 1.89,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Toothpaste",
+    "store" : "Jewel",
+    "price" : 1.89,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Jewel",
+    "price" : 0.89,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Jewel",
+    "price" : 0.98,
+    "date" : "2014-05-16",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 2.59,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 3.79,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Yogurt",
+    "store" : "Family Foods",
+    "price" : 5.99,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Corn",
+    "store" : "Family Foods",
+    "price" : 2.29,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Peas",
+    "store" : "Family Foods",
+    "price" : 2.29,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Beef Sticks",
+    "store" : "Family Foods",
+    "price" : 0.89,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Cookies",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Cookies",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Pretzels",
+    "store" : "Family Foods",
+    "price" : 3,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Cascade",
+    "store" : "Family Foods",
+    "price" : 5.89,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Cascade",
+    "store" : "Family Foods",
+    "price" : 5.89,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 1.4,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 2.27,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Garbage Stickers",
+    "store" : "Family Foods",
+    "price" : 65.8,
+    "date" : "2014-05-08",
+    "categories" : ""
+}
+{
+    "item" : "Oreos",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Fruit Newtons",
+    "store" : "Target",
+    "price" : 2.66,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Carrots",
+    "store" : "Target",
+    "price" : 1.69,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Kraft",
+    "store" : "Target",
+    "price" : 3.54,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Food Coloring",
+    "store" : "Target",
+    "price" : 1.97,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Food Coloring",
+    "store" : "Target",
+    "price" : 1.97,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Sugar",
+    "store" : "Target",
+    "price" : 1.77,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Bread Flour",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Cake Flour",
+    "store" : "Target",
+    "price" : 2.79,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Strawberries",
+    "store" : "Target",
+    "price" : 1.5,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Butter",
+    "store" : "Target",
+    "price" : 3.44,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Cream Cheese",
+    "store" : "Target",
+    "price" : 2.39,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Cream Cheese",
+    "store" : "Target",
+    "price" : 2.39,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Ice Cream",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Bird Food",
+    "store" : "Target",
+    "price" : 4.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 1.46,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 4.67,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Bacon",
+    "store" : "Family Foods",
+    "price" : 5.99,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Braunschwieger",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Family Foods",
+    "price" : 4.33,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.52,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 2.21,
+    "date" : "2014-05-09",
+    "categories" : ""
+}
+{
+    "item" : "Eggs",
+    "store" : "Family Foods",
+    "price" : 1.99,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Orange Juice",
+    "store" : "Family Foods",
+    "price" : 2.99,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Rolls",
+    "store" : "Family Foods",
+    "price" : 1.99,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Frozen Cinnamon Rolls",
+    "store" : "Family Foods",
+    "price" : 4.99,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Mouth Wash",
+    "store" : "Family Foods",
+    "price" : 3.25,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Shampoo",
+    "store" : "Family Foods",
+    "price" : 3.45,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Greeting Card",
+    "store" : "Family Foods",
+    "price" : 3.29,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Greeting Card",
+    "store" : "Family Foods",
+    "price" : 3.29,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Bananas",
+    "store" : "Family Foods",
+    "price" : 1.57,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Strawberries",
+    "store" : "Family Foods",
+    "price" : 1.88,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 1.16,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 5.6,
+    "date" : "2014-05-13",
+    "categories" : ""
+}
+{
+    "item" : "Coke",
+    "store" : "Walmarts",
+    "price" : 4.28,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Paper Towels",
+    "store" : "Walmarts",
+    "price" : 0.97,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Paper Towels",
+    "store" : "Walmarts",
+    "price" : 0.97,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Special K",
+    "store" : "Walmarts",
+    "price" : 2.78,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Honey Bunches Of Oats",
+    "store" : "Walmarts",
+    "price" : 2.94,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Canned Peaches",
+    "store" : "Walmarts",
+    "price" : 1,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Canned Papaya",
+    "store" : "Walmarts",
+    "price" : 1.58,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Canned Peaches",
+    "store" : "Walmarts",
+    "price" : 1,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Canned Peaches",
+    "store" : "Walmarts",
+    "price" : 1,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Bacon Jerky",
+    "store" : "Walmarts",
+    "price" : 3.92,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmarts",
+    "price" : 2.12,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Pasta Sauce",
+    "store" : "Walmarts",
+    "price" : 2.58,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Half And Half",
+    "store" : "Walmarts",
+    "price" : 2.28,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Toaster Strudel",
+    "store" : "Walmarts",
+    "price" : 2,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Flowers",
+    "store" : "Walmarts",
+    "price" : 14.87,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Outside Bird Food",
+    "store" : "Walmarts",
+    "price" : 8.28,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Egg Noodles",
+    "store" : "Walmarts",
+    "price" : 1.78,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmarts",
+    "price" : 1.28,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Walmarts",
+    "price" : 1.28,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Gum",
+    "store" : "Walmarts",
+    "price" : 0.96,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Bagels",
+    "store" : "Walmarts",
+    "price" : 2.98,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Cream Cheese",
+    "store" : "Walmarts",
+    "price" : 2.38,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Walmarts",
+    "price" : 2.78,
+    "date" : "2014-05-10",
+    "categories" : ""
+}
+{
+    "item" : "Tostitos",
+    "store" : "Target",
+    "price" : 4.49,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Peanuts",
+    "store" : "Target",
+    "price" : 3.18,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Blueberries",
+    "store" : "Target",
+    "price" : 2.69,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Bananas",
+    "store" : "Target",
+    "price" : 0.97,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Skintimate",
+    "store" : "Target",
+    "price" : 2.99,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Target",
+    "price" : 0.43,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Target",
+    "price" : 2.88,
+    "date" : "2014-05-31",
+    "categories" : ""
+}
+{
+    "item" : "Grease",
+    "store" : "Family Foods",
+    "price" : 3.99,
+    "date" : "2014-06-15",
+    "categories" : ""
+}
+{
+    "item" : "Grease",
+    "store" : "Family Foods",
+    "price" : 3.99,
+    "date" : "2014-06-15",
+    "categories" : ""
+}
+{
+    "item" : "AP Flour",
+    "store" : "Family Foods",
+    "price" : 3.79,
+    "date" : "2014-06-15",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.21,
+    "date" : "2014-06-15",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 3.79,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Milk",
+    "store" : "Family Foods",
+    "price" : 3.79,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Cheese",
+    "store" : "Family Foods",
+    "price" : 2.49,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Cheese",
+    "store" : "Family Foods",
+    "price" : 2.49,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Cheese",
+    "store" : "Family Foods",
+    "price" : 2.42,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Pasta",
+    "store" : "Family Foods",
+    "price" : 1,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Water",
+    "store" : "Family Foods",
+    "price" : 0.49,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Salt",
+    "store" : "Family Foods",
+    "price" : 0.99,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Bread Crumbs",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Garlic",
+    "store" : "Family Foods",
+    "price" : 0.81,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Tax",
+    "store" : "Family Foods",
+    "price" : 0.38,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Savings",
+    "store" : "Family Foods",
+    "price" : 0.86,
+    "date" : "2014-05-19",
+    "categories" : ""
+}
+{
+    "item" : "Cottage Cheese",
+    "store" : "Family Foods",
+    "price" : 2.69,
+    "date" : "2014-08-24",
+    "categories" : "Dairy"
+}
