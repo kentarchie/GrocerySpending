@@ -9,43 +9,46 @@ html, body {
 
 label { font-weight: bold; font-variant: small-caps; }
 
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-/*	margin: 0 auto -5em; */ /* the bottom margin is the negative value of the footer's height */
+footer {
+    position:absolute;
+    border:1px solid green;
+    clear:both;
+    width:100%;
+    height:2em;
+    bottom:0px;
+    left:0px;
 }
+footer div a { float:left;}
 
-#header {
+header {
     padding:2px;
     background:#5ee;
 }
 
-#content {
-    padding:10px;
-    padding-bottom:3em; /* Height of the footer element */
+.copyright  { 
+    float:right; position:relative; font-size :  small; }
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 }
 
-.footer {
-    border:1px solid green;
-    clear:both;
-    width:100%;
-    height:3em;
-    position:absolute;
-    bottom:0px;
-    left:0px;
+#content {
+    padding:10px;
+    padding-bottom:2em; /* Height of the footer element */
 }
+
 .container { float:left; }
 
 .center     { width:95%; margin-left: auto; margin-right:auto;}
-.copyright  { font-size :  small; width: 95%; margin-left: auto; margin-right:auto;}
 
 #titleblock {  
                text-align:center; 
 				   font-weight: bold; font-size:large; color:red;
             }
 #logoblock  { float:left; top: 0px; left: 0px;}
-.catList  { float:left;}
+.newItemElement  { float:left;}
 
 #commandBlock { width: 70%; clear:both; margin-left: auto; margin-right: auto; }
 
@@ -100,23 +103,44 @@ newDate.dp-applied {
 .tagAdd { }
 .tagAdd input { float: left;}
 
+.tableWrapper {
+    width:85%;
+    height: 250px;
+    overflow: auto; 
+}
+
+.tableClass {
+    border-collapse: collapse;
+	 border-spacing: 10px;
+}
+
+.tableClass td {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.tableClass tr {
+    border-left: 1px solid #000;
+}
+
 /* drag and drag stuff */
-.categorySource { 
-    float: left;
-    width: 20em;
-    height: 300px;
+.tagSource { 
+    float:left;
+    width: 15%;
+    height: 270px;
     overflow: scroll; 
-    margin-right: 15px; 
-    padding-right: 15px; padding-top: 5px;
     background: white; 
 } 
-.categorySource ul li { 
+
+.tagSource ul li { 
     list-style-type: none; 
     cursor:pointer;
  }
-.categorySource p { font-weight: bold; font-variant: small-caps;}
+
+.tagSource p { font-weight: bold; font-variant: small-caps;}
 
 #itemsTbody td:nth-child(5) { 
-    background-color:beige; font-variant: small-caps; 
+    background-color:beige; 
+    font-variant: small-caps; 
     border-bottom: 1px solid black;
 }

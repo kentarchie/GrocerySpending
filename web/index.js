@@ -4,26 +4,16 @@ var express  = require("express")
    ,path = require('path')
 	,fs = require("fs");
 
+var NVCollection = 'NameValue';
+var ItemsCollection = 'Items';
+
 var MongoClient = mongodb.MongoClient;
 	
 var app = express();
 var URI = "mongodb://localhost:27017/GrocerySpending";
-var DBConnection = null;
-
-if(app == undefined) {
-	console.log('app undefined');
-}
-if(app.configure == undefined) {
-	console.log('app.configure undefined');
-}
 
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'static')));
-
-//app.configure(function(){
-//  app.set('port', process.env.PORT || 3000);
-//  app.use(express.static(path.join(__dirname, 'static')));
-//});
 
 app.get('/', function(req, res){
   res.render('index', {
@@ -36,122 +26,93 @@ app.get('/about', function (req, res)
   res.send('Grocery Spending Recorder');
 });
 
-app.get('/GetStores', function (req, res)
+app.get('/GetValues/:requestedName', function (req, res)
 {
-	console.log('Starting GetStores');
+	var requestedName=req.params.requestedName;
+	console.log('Starting GetValues requestedName='+requestedName);
 	writeJSONHeader(res);
+   var dbConnection = null;
 
-	//ConnectToDB(res);
-	MongoClient.connect(URI, function (err, DBConnection) {
+	MongoClient.connect(URI, function (err, dbConnection) {
 		if (err) {
 			console.log('Unable to connect to the mongoDB server. Error:', err);
-			res.write('{"returncode" : "fail","message" : "GrocerySpending connect failed"}');
+			res.write('{"returncode" : "fail","message" : "GrocerySpending MongoClient connect failed"}');
 			res.end();
 			return;
 		} 
 
-		if(!DBConnection || (DBConnection == undefined) || DBConnection == null) {
-			console.log('DBConnection null');
-			res.write('{"returncode" : "fail","message" : "GrocerySpending DBConnect null"}');
-			res.end();
-			return;
-      }
+      if(!CheckDBConnection(dbConnection,res)) return;
 
-		var collection = DBConnection.collection('NameValue');
-		if(!collection || (collection == undefined)) {
-			console.log("There was an error attaching to GrocerySpending:NameValue.");
-			console.log("DBConnection.NameValue=:"+DBConnection.NameValue+":");
-			res.write('{"returncode" : "fail","message" : "GrocerySpending.NameValue missing"}');
-			res.end();
-			return;
-      }
-		console.log("NameValue found, collection OK");
+      var collection = GetCheckCollection(NVCollection,dbConnection,res);
+      if(collection == null) return;
+		console.log(NVCollection+" found, collection OK");
+
       var results = {};
 	
 		collection.find({}).toArray(function (err, records) {
 			if(err) {
 				console.log("There was an error executing the database query.");
-				res.write('{"returncode" : "fail","message" : "NameValue Find Failed"}');
+				res.write('{"returncode" : "fail","message" : '+NVCollection+'"Find Failed"}');
 				res.end();
 				return;
 			}
-			results['returncode']  =  'pass';
 			console.log('records.length = :'+records.length+':')
 
-         var storesList = [];
+         var valueList = [];
 			for(var i=0,il=records.length; i<il; ++i) {
-            var item = {};
-				if(records[i]['name'] == 'store')
-            storesList.push(records[i]['value']);
-			   results['StoreList'] = storesList;
+				if(records[i]['name'] == requestedName)
+               valueList.push(records[i]['value']);
 			}
+			results['returncode']  =  'pass';
+			results['values'] = valueList;
 			res.write(JSON.stringify(results,null,'\n'));
 			res.end();
-		});
+		}); // find
   });
-}); // GetStores
+}); // GetValues
 
-app.get('/GetTags', function (req, res)
+app.get('/GetItems', function (req, res)
 {
+	console.log('Starting GetItems');
 	writeJSONHeader(res);
+   var dbConnection = null;
 
-	//ConnectToDB(res);
-	MongoClient.connect(URI, function (err, DBConnection) {
+	MongoClient.connect(URI, function (err, dbConnection) {
 		if (err) {
 			console.log('Unable to connect to the mongoDB server. Error:', err);
-			res.write('{"returncode" : "fail","message" : "GrocerySpending connect failed"}');
+			res.write('{"returncode" : "fail","message" : "GrocerySpending MongoClient connect failed"}');
 			res.end();
 			return;
 		} 
 
-		if(!DBConnection || (DBConnection == undefined) || DBConnection == null) {
-			console.log('DBConnection null');
-			res.write('{"returncode" : "fail","message" : "GrocerySpending DBConnect null"}');
-			res.end();
-			return;
-      }
+      if(!CheckDBConnection(dbConnection,res)) return;
 
-		var collection = DBConnection.collection('NameValue');
-		if(!collection || (collection == undefined)) {
-			console.log("There was an error attaching to GrocerySpending:NameValue.");
-			console.log("DBConnection.NameValue=:"+DBConnection.NameValue+":");
-			res.write('{"returncode" : "fail","message" : "GrocerySpending.NameValue missing"}');
-			res.end();
-			return;
-      }
-		console.log("NameValue found, collection OK");
+      var collection = GetCheckCollection(ItemsCollection,dbConnection,res);
+      if(collection == null) return;
+		console.log(NVCollection+" found, collection OK");
+
       var results = {};
 	
 		collection.find({}).toArray(function (err, records) {
 			if(err) {
 				console.log("There was an error executing the database query.");
-				res.write('{"returncode" : "fail","message" : "NameValue Find Failed"}');
+				res.write('{"returncode" : "fail","message" : '+ItemsCollection+'"Find Failed"}');
 				res.end();
 				return;
 			}
-			results['returncode']  =  'pass';
 			console.log('records.length = :'+records.length+':')
 
-         var tagsList = [];
+         var valueList = [];
 			for(var i=0,il=records.length; i<il; ++i) {
-            var item = {};
-				if(records[i]['name'] == 'tag')
-            tagsList.push(records[i]['value']);
-			   results['StoreList'] = tagsList;
+            valueList.push(records[i]);
 			}
+			results['returncode']  =  'pass';
+			results['values'] = valueList;
 			res.write(JSON.stringify(results,null,'\n'));
 			res.end();
-		});
+		}); // find
   });
-}); // GetTags
-
-/*
-var server = app.listen(8080, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('GrocerySpending request application listening at http://%s:%s', host, port);
-});
-*/
+}); // GetItems
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
@@ -165,14 +126,26 @@ function writeJSONHeader(res)
     });
 } // writeJSONHeader
 
-function ConnectToDB(res)
+function CheckDBConnection(dbConnection,res)
 {
-	if(DBConnection == null) DBConnection  = mongojs.connect(URI);
-	if(!DBConnection || (DBConnection == undefined)) {
-		console.log("ConnectToDB: There was an error executing the database connection.");
-		res.write('{"returncode" : "fail","message" : "GrocerySpending connect Failed"}');
+	if(!dbConnection || (dbConnection == undefined) || dbConnection == null) {
+		console.log("CheckDBConnection: There was an error executing the database connection.");
+		res.write('{"returncode" : "fail","message" : "GrocerySpending connect Failed","db" :'+ dbConnection+'}');
 		res.end();
-		return;
+		return false;
 	}
 	console.log("DB Connection OK");
-} // ConnectToDB
+	return true;
+} // CheckDBConnection
+
+function GetCheckCollection(collectionName,dbConnection,res)
+{
+		var collection = dbConnection.collection(collectionName);
+		if(!collection || (collection == undefined)) {
+			console.log("There was an error attaching to GrocerySpending:"+collectionName);
+			res.write('{"returncode" : "fail","message" : "GrocerySpending.'+collectionName+' missing"}');
+			res.end();
+			return null;
+      }
+      return(collection);
+} // GetCheckCollection

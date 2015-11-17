@@ -1,4 +1,4 @@
-var Categories = [];
+var Tags = [];
 var Stores = [];
 var ItemList = [];
 var ItemData = [];
@@ -37,24 +37,10 @@ $(document).ready(function() {
    $('#addTag').click(addTag);
    $('#addItem').click(addItem);
    $('#testUpdate').click(testUpdate);
-
-   $.ajax({
-        type: "GET"
-        ,dataType: "json"
-        ,url: "db/dbConfig.js"
-        ,data: ""
-        ,success: function(data,status,xhr)
-        {
-            console.log('init: result received xhr=:'+xhr+':');
-            logger('init: data=:'+JSON.stringify(data,null,'\n')+':');
-            ConfigData = jQuery.extend({}, data);
-            DBParams = 'DBHost='   + ConfigData['DBHost'];
-            DBParams += '&DBName=' + ConfigData['DBName'];
-            DBParams += '&DBUser=' + ConfigData['DBUser'];
-            DBParams += '&DBPass=' + ConfigData['DBPass'];
-            getItems();
-        }
-    });
+   var copyRightYear = new Date().getFullYear();
+   logger('init:  copyRightYear=:'+copyRightYear+':');
+   $('.copyright span').html(copyRightYear);
+   getItems();
 }); // init function 
 
 function dataError(which)
@@ -63,42 +49,39 @@ function dataError(which)
     ErrorDialog.dialog( "open" );
 } // dataError
 
-function getCategories()
+function getTags()
 {
-    logger('getCategories: STARTED');
+    logger('getTags: STARTED');
     $.ajax({
-        type: 'GET'
+        type: "GET"
         ,dataType: "json"
-        ,url: 'backend/GetValues.cgi'
-        ,data: DBParams + '&name=tag'
+        ,url: 'GetValues/tag'
+        ,data: ''
         ,success: function(data)
         {
-            //logger('getCategories: data=:'+JSON.stringify(data,null,'\n')+':');
-            logger('getCategories: result received');
+            logger('getTags: result received');
             if (data.returncode == 'pass') {
-                logger('getCategories: data.values.length=:'+data.values.length+':');
+                logger('getTags: data.values.length=:'+data.values.length+':');
                 $('#tagSource ul').html('');
                 var tlist=[];
                 for(var d=0,dl=data.values.length; d< dl; ++d ) {
-                   //logger('getCategories: data.values[d]=:'+data.values[d]+':');
                    tlist.push("<li>" + data.values[d] + "</li>");
                 }
                 $('#tagSource ul').html(tlist.join(' '));
-                logger('init: draggable set');
-                $(".categorySource li").draggable({
+                $(".tagSource li").draggable({
                    helper : 'clone'
                    ,containment : 'document'
                 });
                 logger('init: draggable done');
-                logger('getCategories: UL list created');
+                logger('getTags: UL list created');
             }
             else {
-               logger('getCategories: result failed');
-               dataError("Categories");
+               logger('getTags: result failed');
+               dataError("Tags");
             }
         }
     });
-} // getCategories
+} // getTags
 
 function getStores()
 {
@@ -106,12 +89,11 @@ function getStores()
     $.ajax({
         type: "GET"
         ,dataType: "json"
-        ,url: 'backend/GetValues.cgi'
-        ,data: DBParams + '&name=store'
+        ,url: 'GetValues/store'
+        ,data: ''
         ,success: function(data)
         {
-            //logger('getStores: data=:'+JSON.stringify(data,null,'\n')+':');
-            logger('getStores: result recieved');
+            logger('getStores: result received');
             if (data.returncode == 'pass') {
                 logger('getStores: data.values.length=:'+data.values.length+':');
                 $('#newStore').autocomplete({
@@ -130,12 +112,12 @@ function getItems()
 {
     logger('getItems: started');
     $.ajax({
-        type: "POST"
-        ,url: 'backend/GetItems.cgi'
-        ,data: DBParams
+        type: "GET"
+        ,dataType: "json"
+        ,url: 'GetItems'
+        ,data: ''
         ,success: function(data)
         {
-            //logger('getItems: data=:'+JSON.stringify(data,null,'\n')+':');
             logger('getItems: result received');
             if (data.returncode == 'pass') {
                ItemData = data.values;
@@ -143,12 +125,12 @@ function getItems()
                makeItemList(ItemData);
                makeTable(ItemData);
                getStores();
-               getCategories();
+               getTags();
                $("#itemsTbody td:nth-child(5),.tagDrop").droppable({
                      drop: function (event, ui) {
                         //logger('dropHandler: delegateTarget=:'+$(this).html()+':');
                         var newTag = ui.draggable.text(); // what got dropped
-                        var oldTags = $(this).text().replace('Categories','');
+                        var oldTags = $(this).text().replace('Tags','');
                         var row = $(this).attr('data-row');
                         var sep = (oldTags.length == 0) ? '' : ',';
                         var updatedTags = oldTags + sep + newTag;
@@ -161,7 +143,7 @@ function getItems()
                            NumRecordsChanged++;
                            for(var r=0,rL=ItemData.length; r<rL; ++r) {
                               if(ItemData[r].rowid == row) {
-                                 ItemData[r]['categories'] = updatedTags;
+                                 ItemData[r]['tags'] = updatedTags;
                                  ItemData[r].changed = true;
                                  $(this).css('background-color', 'yellow');
                                  break;
@@ -246,10 +228,9 @@ function makeTable(data)
     $('#itemsTBody').html(outList.join(''));
     logger('makeTable: before table make');
     $('#itemsTable').fixedHeaderTable({ 
-	      footer: true
-	      ,cloneHeadToFoot: true
-	      ,altClass: 'odd'
-         ,height : '300px'
+         height : '270'
+         ,width : '750'
+         ,themeClass : 'defaultTheme'
     });
     logger('makeTable: after table make');
 } // makeTable
@@ -270,7 +251,7 @@ function saveChanges()
            record += '^' + ItemData[r]['store'];
            record += '^' + ItemData[r]['item'];
            record += '^' + ItemData[r]['price'];
-           record += '^' + ItemData[r]['categories'];
+           record += '^' + ItemData[r]['tags'];
            logger('saveChanges: saving record=:'+record+':');
            changedRecords.push(record);
        }
@@ -300,7 +281,7 @@ function addItem(ev)
 {
    logger('addItem: start');
    var formStr = $('#newItemEntry').serialize();
-   var tagValue = $('#newCategories').html();
+   var tagValue = $('#newTags').html();
    logger('addItem: adding item :' +formStr+ ':');
    $.ajax({
      type: "GET"
@@ -345,7 +326,7 @@ function addTag(ev)
             MesgDialog.dialog( "open" );
 
             $('#newTag').val('');
-            getCategories();
+            getTags();
          }
          else {
             $('#mesgData').html('adding tag ' +tag+ ' failed');
