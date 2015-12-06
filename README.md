@@ -2,6 +2,7 @@
 ###Software
 Node.js
 MongoDB
+Monk
 ### Node Packages
 npm install --save body-parser
 ### CSS
@@ -35,3 +36,5 @@ The web application is displaying the existing data and has the JQuery ui elemen
 These are the scrolling table, the tags list and the autocomplete stores and items lists.
 It also supports drag and drop between the tags list and the tags fields on the form and on the table
 Working on the backend updating of the changed records.
+## 6 December 2015
+Rewrote the routes using monk for the Mongo interface. Finally got changed tags to be updated.
