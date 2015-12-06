@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 }
 
-label { font-weight: bold; font-variant: small-caps; }
+label { font-size: normal; font-variant: small-caps; }
 
 footer {
     position:absolute;
@@ -18,6 +18,7 @@ footer {
     bottom:0px;
     left:0px;
 }
+
 footer div a { float:left;}
 
 header {
@@ -29,9 +30,9 @@ header {
     float:right; position:relative; font-size :  small; }
 
 .wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
 }
 
 #content {
@@ -44,8 +45,10 @@ header {
 .center     { width:95%; margin-left: auto; margin-right:auto;}
 
 #titleblock {  
-               text-align:center; 
-				   font-weight: bold; font-size:large; color:red;
+    text-align:center; 
+    font-weight: bold; 
+               font-size:large; 
+               color:red;
             }
 #logoblock  { float:left; top: 0px; left: 0px;}
 .newItemElement  { float:left;}
@@ -63,9 +66,9 @@ header {
 
 .formBox { 
     float:left;
-    clear:right;
     border: 1px solid red;
     width: 60%;
+    margin-right: 10px;
 }
 
 #addItem { margin-left: 3em;}
@@ -100,7 +103,10 @@ newDate.dp-applied {
     width:20em; border: 1px solid green;
 }
 
-.tagAdd { }
+.tagAdd { 
+    width:12em; 
+    margin-left: 10px;
+}
 .tagAdd input { float: left;}
 
 .tableWrapper {
@@ -127,7 +133,7 @@ newDate.dp-applied {
 .tagSource { 
     float:left;
     width: 15%;
-    height: 270px;
+    height: 260px;
     overflow: scroll; 
     background: white; 
 } 

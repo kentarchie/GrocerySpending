@@ -8,6 +8,14 @@ var RecordsChanged = false;
 var NumRecordsChanged = 0;
 
 var ErrorDialog,MesgDialog;
+var DB_ID    = '_id';
+var DB_DATE  = 'date';
+var DB_STORE = 'store';
+var DB_ITEM  = 'item';
+var DB_PRICE = 'price';
+var DB_TAGS  = 'tags';
+var DB_FIELDS = [DB_ID,DB_DATE,DB_STORE,DB_ITEM,DB_PRICE,DB_TAGS]
+var UPDATE_INTERVAL=2;
 
 $(document).ready(function() {
    logger('init: START ');
@@ -127,34 +135,42 @@ function getItems()
                getStores();
                getTags();
                $("#itemsTbody td:nth-child(5),.tagDrop").droppable({
-                     drop: function (event, ui) {
-                        //logger('dropHandler: delegateTarget=:'+$(this).html()+':');
+                     drop: function (ev, ui) {
+                        var here = $(this);
+                        here.css('background-color',"#FC5050");
+                        logger('dropHandler: delegateTarget=:'+here.html()+':');
                         var newTag = ui.draggable.text(); // what got dropped
-                        var oldTags = $(this).text().replace('Tags','');
-                        var row = $(this).attr('data-row');
+                        logger('dropHandler: newTag= :'+newTag+':');
+                        var oldTags = here.text().replace('Tags','');
+                        logger('dropHandler: oldTags=:'+oldTags+':');
+                        
+                        var row = here.attr('data-row');
+                        logger('dropHandler: row= :'+row+':');
                         var sep = (oldTags.length == 0) ? '' : ',';
                         var updatedTags = oldTags + sep + newTag;
-                        //logger('dropHandler: newTag= :'+newTag+':');
-                        //logger('dropHandler: oldTags=:'+oldTags+':');
-                        $(this).html(updatedTags);
-                        $(this).trigger('CellChange',[event,ui]);
+                        logger('dropHandler: after: updatedTags= :'+updatedTags+':');
+                        logger('dropHandler: after: oldTags=:'+oldTags+':');
+
+                        here.html(updatedTags);
+                        here.trigger('CellChange',[ev,ui]);
+
                         if(row != undefined) {
                            RecordsChanged = true;
                            NumRecordsChanged++;
                            for(var r=0,rL=ItemData.length; r<rL; ++r) {
-                              if(ItemData[r].rowid == row) {
-                                 ItemData[r]['tags'] = updatedTags;
+                              if(ItemData[r][DB_ID] == row) {
+                                 ItemData[r][DB_TAGS] = updatedTags;
                                  ItemData[r].changed = true;
-                                 $(this).css('background-color', 'yellow');
+                                 here.css('background-color', 'yellow');
                                  break;
                               }
                            }
-                           if(NumRecordsChanged > 3) {
+                           if(NumRecordsChanged > UPDATE_INTERVAL) {
                               logger('dropHandler: NumRecordsChanged = :'+NumRecordsChanged+':');
                               saveChanges();
                            }
                         }
-                        logger('dropHandler: data-row= :'+row+':');
+                        logger('dropHandler: done: data-row= :'+row+':');
                      }
                   });
             }
@@ -217,18 +233,19 @@ function makeTable(data)
     for(var row=0,rowL=data.length; row<rowL; ++row) {
         var dValue = data[row];
         outList.push('<tr>');
-        outList.push('<td>'+dValue['date']+'</td>');
-        outList.push('<td>'+dValue['store']+'</td>');
-        outList.push('<td>'+dValue['item']+'</td>');
-        outList.push('<td>'+dValue['price']+'</td>');
-        outList.push('<td data-row="'+dValue['rowid']+'">'+dValue['tags']+'</td>');
+        outList.push('<td>'+dValue[DB_DATE]+'</td>');
+        outList.push('<td>'+dValue[DB_STORE]+'</td>');
+        outList.push('<td>'+dValue[DB_ITEM]+'</td>');
+        outList.push('<td>'+dValue[DB_PRICE]+'</td>');
+        if(dValue[DB_TAGS] == undefined) dValue[DB_TAGS]='';
+        outList.push('<td data-row="'+dValue[DB_ID]+'">'+dValue[DB_TAGS]+'</td>');
         outList.push('</tr>');
     }
     logger('makeTable: outList made');
     $('#itemsTBody').html(outList.join(''));
     logger('makeTable: before table make');
     $('#itemsTable').fixedHeaderTable({ 
-         height : '270'
+         height : '250'
          ,width : '750'
          ,themeClass : 'defaultTheme'
     });
@@ -237,33 +254,29 @@ function makeTable(data)
 
 function saveChanges()
 {
-    var data = {};
-    data['DBHost'] = ConfigData['DBHost'];
-    data['DBName'] = ConfigData['DBName'];
-    data['DBUser'] = ConfigData['DBUser'];
-    data['DBPass'] = ConfigData['DBPass'];
-
+    var data={};
     var changedRecords = [];
     for(var r=0,rL=ItemData.length; r<rL; ++r) {
-       if( ItemData[r].changed) {
-           var record = ItemData[r]['rowid'];
-           record += '^' + ItemData[r]['date'];
-           record += '^' + ItemData[r]['store'];
-           record += '^' + ItemData[r]['item'];
-           record += '^' + ItemData[r]['price'];
-           record += '^' + ItemData[r]['tags'];
-           logger('saveChanges: saving record=:'+record+':');
-           changedRecords.push(record);
+       var thisItem = ItemData[r];
+       if( thisItem.changed) {
+           var changedItem = {};
+           for ( var i = 0, l = DB_FIELDS.length; i < l; ++i ) {
+               changedItem[DB_FIELDS[i]]  = thisItem[DB_FIELDS[i]];
+           }
+           changedRecords.push(changedItem);
        }
     }
     data['changedRecords'] = changedRecords;
     //logger('saveChanges: data before send=:'+JSON.stringify(data,null,'\n')+':');
     $.ajax({
         type: 'POST'
-        ,url: 'backend/UpdateItems.cgi'
-        ,data: JSON.stringify(data)
+        ,url: '/SaveChanges'
+        ,data: data
         ,success: function(data)
         {
+            logger('saveChanges: returned raw data = :'+data+':');
+            logger('saveChanges: returned data = :'+JSON.stringify(data,null,'\n')+':');
+            logger('saveChanges: returncode = :'+data.returncode+':');
             if (data.returncode == 'pass') {
                logger('saveChanges: changed records updated');
                RecordsChanged = false;

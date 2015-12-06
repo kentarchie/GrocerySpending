@@ -1,0 +1,2 @@
+insert file of items into a collection
+mongoimport --db GrocerySpending --collection Items --drop --file purchases.json
