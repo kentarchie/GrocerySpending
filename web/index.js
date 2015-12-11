@@ -180,6 +180,42 @@ app.post('/SaveChanges', function(request, response)
 	 response.write(JSON.stringify(results,null,'\n'));
 	 response.end();
 }); //SaveChanges
+
+app.post('/AddNameValue', function(request, response)
+{
+    nodeLogger('AddTag: start');
+	 writeJSONHeader(response);
+    var results = {};
+	 results['returncode']  =  'pass';
+    var db = request.db;
+    var collection = db.get(NV_COLLECTION);
+   
+   if((collection == null) || (collection == undefined)){
+	   results['returncode']  =  'fail';
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+      return;
+   }
+	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
+
+   var newName = request.body.name;
+   var newValue = request.body.value;
+	results['name'] = newName;
+	results['value'] = newValue;
+	nodeLogger('AddTag: adding name  '+ newName + 'value=' + newValue);
+   try {
+      var addTag = collection.insert( {
+         'name'  : newName
+        ,'value' : newValue
+      });
+   }
+   catch(e) {
+	   nodeLogger('AddTag: exception '+ e);
+	   results['returncode']  =  'fail';
+   }
+	response.write(JSON.stringify(results,null,'\n'));
+	response.end();
+}); //AddNameValue
            
 function nodeLogger(str)
 {

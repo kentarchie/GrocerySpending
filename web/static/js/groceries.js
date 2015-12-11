@@ -1,21 +1,24 @@
-var Tags = [];
-var Stores = [];
-var ItemList = [];
-var ItemData = [];
-var ConfigData = null;
-var DBParams = "";
-var RecordsChanged = false;
-var NumRecordsChanged = 0;
-
-var ErrorDialog,MesgDialog;
 var DB_ID    = '_id';
 var DB_DATE  = 'date';
 var DB_STORE = 'store';
 var DB_ITEM  = 'item';
 var DB_PRICE = 'price';
 var DB_TAGS  = 'tags';
-var DB_FIELDS = [DB_ID,DB_DATE,DB_STORE,DB_ITEM,DB_PRICE,DB_TAGS]
+var DB_FIELDS = [DB_ID,DB_DATE,DB_STORE,DB_ITEM,DB_PRICE,DB_TAGS];
 var UPDATE_INTERVAL=2;
+
+var CHANGING_COLOR='yellow';
+var CHANGED_COLOR='#FC5050';
+var BASE_COLOR='#F5F5DC';
+
+var Tags = [];
+var Stores = [];
+var ItemList = [];
+var ItemData = [];
+var ConfigData = null;
+var RecordsChanged = false;
+var NumRecordsChanged = 0;
+var ErrorDialog,MesgDialog;
 
 $(document).ready(function() {
    logger('init: START ');
@@ -57,6 +60,24 @@ function dataError(which)
     ErrorDialog.dialog( "open" );
 } // dataError
 
+function displayTags()
+{
+    logger('displayTags: start');
+    var tlist=[];
+    var sortedTags = Tags.sort();
+    $('#tagSource ul').html('');
+    for(var d=0,dl=sortedTags.length; d< dl; ++d ) {
+        tlist.push("<li>" + sortedTags[d] + "</li>");
+    }
+    $('#tagSource ul').html(tlist.join(' '));
+    $(".tagSource li").draggable({
+                   helper : 'clone'
+                   ,containment : 'document'
+    });
+    logger('init: draggable done');
+    logger('getTags: UL list created');
+} // displayTags
+
 function getTags()
 {
     logger('getTags: STARTED');
@@ -70,18 +91,9 @@ function getTags()
             logger('getTags: result received');
             if (data.returncode == 'pass') {
                 logger('getTags: data.values.length=:'+data.values.length+':');
-                $('#tagSource ul').html('');
-                var tlist=[];
-                for(var d=0,dl=data.values.length; d< dl; ++d ) {
-                   tlist.push("<li>" + data.values[d] + "</li>");
-                }
-                $('#tagSource ul').html(tlist.join(' '));
-                $(".tagSource li").draggable({
-                   helper : 'clone'
-                   ,containment : 'document'
-                });
-                logger('init: draggable done');
-                logger('getTags: UL list created');
+                Tags = [];
+                for (t in data.values) Tags.push(data.values[t]);
+                displayTags();
             }
             else {
                logger('getTags: result failed');
@@ -137,19 +149,17 @@ function getItems()
                $("#itemsTbody td:nth-child(5),.tagDrop").droppable({
                      drop: function (ev, ui) {
                         var here = $(this);
-                        here.css('background-color',"#FC5050");
-                        logger('dropHandler: delegateTarget=:'+here.html()+':');
+                        here.css('background-color',CHANGED_COLOR);
                         var newTag = ui.draggable.text(); // what got dropped
-                        logger('dropHandler: newTag= :'+newTag+':');
                         var oldTags = here.text().replace('Tags','');
-                        logger('dropHandler: oldTags=:'+oldTags+':');
-                        
+
                         var row = here.attr('data-row');
-                        logger('dropHandler: row= :'+row+':');
+                        if(oldTags.indexOf(newTag) != -1) {
+                            here.css('background-color', BASE_COLOR);
+                            return;  // duplicated tag
+                        }
                         var sep = (oldTags.length == 0) ? '' : ',';
                         var updatedTags = oldTags + sep + newTag;
-                        logger('dropHandler: after: updatedTags= :'+updatedTags+':');
-                        logger('dropHandler: after: oldTags=:'+oldTags+':');
 
                         here.html(updatedTags);
                         here.trigger('CellChange',[ev,ui]);
@@ -161,16 +171,14 @@ function getItems()
                               if(ItemData[r][DB_ID] == row) {
                                  ItemData[r][DB_TAGS] = updatedTags;
                                  ItemData[r].changed = true;
-                                 here.css('background-color', 'yellow');
+                                 here.css('background-color', CHANGING_COLOR);
                                  break;
                               }
                            }
                            if(NumRecordsChanged > UPDATE_INTERVAL) {
-                              logger('dropHandler: NumRecordsChanged = :'+NumRecordsChanged+':');
                               saveChanges();
                            }
                         }
-                        logger('dropHandler: done: data-row= :'+row+':');
                      }
                   });
             }
@@ -281,6 +289,9 @@ function saveChanges()
                logger('saveChanges: changed records updated');
                RecordsChanged = false;
                NumRecordsChanged = 0;
+               for(var r=0,rL=ItemData.length; r<rL; ++r) {
+                  ItemData[r].changed = false;
+               }
             }
             else {
                logger('saveChanges: changed records update failed');
@@ -293,14 +304,16 @@ function saveChanges()
 function addItem(ev)
 {
    logger('addItem: start');
+   var data={};
    var formStr = $('#newItemEntry').serialize();
    var tagValue = $('#newTags').html();
    logger('addItem: adding item :' +formStr+ ':');
+
+   data['changedRecords'] = changedRecords;
    $.ajax({
-     type: "GET"
-     ,dataType: "json"
-     ,url: "backend/AddItem.cgi"
-     ,data: DBParams+"&tags="+tagValue+"&"+formStr
+     type: 'POST'
+     ,url: '/AddItem'
+     ,data: data
      ,success: function(data,status,xhr)
      {
         //logger('init: data=:'+JSON.stringify(data,null,'\n')+':');
@@ -323,26 +336,23 @@ function addItem(ev)
 
 function addTag(ev)
 {
-   var tag = $('#newTag').val();
-   logger('addTag: addTag tag=:'+tag+':');
+   var newTag = $('#newTag').val();
+   logger('addTag: addTag tag=:'+newTag+':');
    $.ajax({
-     type: "GET"
-     ,dataType: "json"
-     ,url: "backend/AddTag.cgi"
-     ,data: DBParams+"&tag="+tag
+     type: 'POST'
+     ,dataType: 'json'
+     ,url: '/AddNameValue'
+     ,data: 'name=tag&value='+newTag
      ,success: function(data,status,xhr)
      {
-         //logger('addTag: addTag xhr=:'+xhr+':');
-         //logger('addTag: data=:'+JSON.stringify(data,null,'\n')+':');
          if (data.returncode == 'pass') {
-            $('#mesgData').html('adding tag ' +tag+ ' worked');
-            MesgDialog.dialog( "open" );
-
+            logger('adding tag ' +newTag+ ' worked');
             $('#newTag').val('');
-            getTags();
+            Tags.push(newTag);
+            displayTags();
          }
          else {
-            $('#mesgData').html('adding tag ' +tag+ ' failed');
+            $('#mesgData').html('adding tag ' +newTag+ ' failed');
             MesgDialog.dialog( "open" );
          }
      }
