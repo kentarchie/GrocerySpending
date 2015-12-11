@@ -116,8 +116,10 @@ function getStores()
             logger('getStores: result received');
             if (data.returncode == 'pass') {
                 logger('getStores: data.values.length=:'+data.values.length+':');
+                Stores = [];
+                for (t in data.values) Stores.push(data.values[t]);
                 $('#newStore').autocomplete({
-                     source: data.values
+                     source: Stores
                 });
             }
             else {
@@ -301,10 +303,38 @@ function saveChanges()
     });
 } // saveChanges
 
+function clearForm()
+{
+   $('newDate').html('');
+   $('newStore').html('');
+   $('newItem').html('');
+   $('newPrice').html('');
+   $('newTags').html('Tags');
+} // clearForm
+
+function checkAddStore(store)
+{
+    logger('checkAddStore: store='+store);
+    logger('checkAddStore: Stores.length='+Stores.length);
+    var found = false;
+    for(var i=0,il=Stores.length; i< il; ++i) {
+        found = (Stores[i] == store);
+    }
+    if(!found) {
+        Stores.push(store);
+        $('#newStore').autocomplete('option',{
+             source: Stores
+        });
+        addNameValue('store',store);
+    logger('checkAddStore: Stores updated');
+    }
+} // checkAddStore
+
 function addItem(ev)
 {
    logger('addItem: start');
    var formStr = $('#newItemEntry').serialize();
+   checkAddStore($('#newStore').val());
    var newTags = $('#newTags').html();
    logger('addItem: adding item :' +formStr+ ':');
 
@@ -315,12 +345,15 @@ function addItem(ev)
      ,success: function(data,status,xhr)
      {
         if (data.returncode == 'pass') {
+           //clearForm();
+           /*
            $('#mesgData').html('adding item worked');
            MesgDialog.dialog( "open" );
            window.setTimeout(function(){
                MesgDialog.hide();
                logger('addItem: mesg closed');
            }, 3000);
+           */
 
         }
         else {
@@ -331,22 +364,18 @@ function addItem(ev)
    });
 } // addItem
 
-function addTag(ev)
+function addNameValue(name,value)
 {
-   var newTag = $('#newTag').val();
-   logger('addTag: addTag tag=:'+newTag+':');
+   logger('addNameValue: addNameValue name=:'+name+': value=:'+value+':');
    $.ajax({
      type: 'POST'
      ,dataType: 'json'
      ,url: '/AddNameValue'
-     ,data: 'name=tag&value='+newTag
+     ,data: 'name='+name+'&value='+value
      ,success: function(data,status,xhr)
      {
          if (data.returncode == 'pass') {
-            logger('adding tag ' +newTag+ ' worked');
-            $('#newTag').val('');
-            Tags.push(newTag);
-            displayTags();
+            logger('addNameValue: adding '+ name+ ' worked');
          }
          else {
             $('#mesgData').html('adding tag ' +newTag+ ' failed');
@@ -354,6 +383,16 @@ function addTag(ev)
          }
      }
    });
+} // addNameValue
+
+function addTag(ev)
+{
+   var newTag = $('#newTag').val();
+   logger('addTag: addTag tag=:'+newTag+':');
+   $('#newTag').val('');
+   Tags.push(newTag);
+   displayTags();
+   addNameValue('tag',newTag);
 } // addTag
 
 function logger(str)
