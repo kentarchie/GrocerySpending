@@ -304,19 +304,16 @@ function saveChanges()
 function addItem(ev)
 {
    logger('addItem: start');
-   var data={};
    var formStr = $('#newItemEntry').serialize();
-   var tagValue = $('#newTags').html();
+   var newTags = $('#newTags').html();
    logger('addItem: adding item :' +formStr+ ':');
 
-   data['changedRecords'] = changedRecords;
    $.ajax({
      type: 'POST'
      ,url: '/AddItem'
-     ,data: data
+     ,data: formStr + '&newTags='+newTags
      ,success: function(data,status,xhr)
      {
-        //logger('init: data=:'+JSON.stringify(data,null,'\n')+':');
         if (data.returncode == 'pass') {
            $('#mesgData').html('adding item worked');
            MesgDialog.dialog( "open" );

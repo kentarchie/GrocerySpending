@@ -196,7 +196,7 @@ app.post('/AddNameValue', function(request, response)
 	   res.end();
       return;
    }
-	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
+	nodeLogger(NV_COLLECTION + " found, collection OK");
 
    var newName = request.body.name;
    var newValue = request.body.value;
@@ -216,6 +216,54 @@ app.post('/AddNameValue', function(request, response)
 	response.write(JSON.stringify(results,null,'\n'));
 	response.end();
 }); //AddNameValue
+
+app.post('/AddItem', function(request, response)
+{
+    nodeLogger('Item: start');
+	 writeJSONHeader(response);
+    var results = {};
+	 results['returncode']  =  'pass';
+    var db = request.db;
+    var collection = db.get(ITEMS_COLLECTION);
+   
+   if((collection == null) || (collection == undefined)){
+	   results['returncode']  =  'fail';
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+      return;
+   }
+	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
+
+   var newDate = request.body.newDate;
+   var newStore = request.body.newStore;
+   var newItem = request.body.newItem;
+   var newPrice = request.body.newPrice;
+   var newTags = request.body.newTags;
+	results['date'] = newDate;
+	results['store'] = newStore;
+	results['item'] = newItem;
+	results['price'] = newPrice;
+	results['tags'] = newTags;
+
+   var newDocument = {
+          'date'   : newDate
+          ,'store' : newStore
+          ,'item'  : newItem
+          ,'price' : newPrice
+          ,'tags'  : newTags
+      };
+   nodeLogger('AddItem: saving ' + JSON.stringify(newDocument,null,'\n'));
+   try {
+      var addItem = collection.insert(newDocument);
+   }
+   catch(e) {
+	   nodeLogger('Item: exception '+ e);
+	   results['returncode']  =  'fail';
+   }
+   nodeLogger('AddItem: done saving');
+	response.write(JSON.stringify(results,null,'\n'));
+	response.end();
+}); //AddItem
            
 function nodeLogger(str)
 {
