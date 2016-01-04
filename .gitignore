@@ -6,3 +6,4 @@ attic/*
 web/node_modules
 web/node_modules/*
 npm-debug.log
+database/*.json

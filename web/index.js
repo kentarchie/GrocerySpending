@@ -1,5 +1,6 @@
 var express  = require("express")
 	,mongodb = require("mongodb")
+	,moment = require("moment")
    ,monk = require('monk')
    ,bodyParser = require('body-parser')
    ,http = require('http')
@@ -14,11 +15,13 @@ var DB_STORE = 'store';
 var DB_ITEM  = 'item';
 var DB_PRICE = 'price';
 var DB_TAGS  = 'tags';
+var DATE_FORMAT = 'D MMM YYYY';
 
 var APPLICATION_NAME = 'GrocerySpending';
 
 var MongoClient = mongodb.MongoClient;
 var DB = monk('localhost:27017/'+APPLICATION_NAME);
+moment().format();
 	
 var app = express();
 var URI = "mongodb://localhost:27017/" + APPLICATION_NAME;
@@ -125,6 +128,65 @@ app.get('/GetItems', function (req, res)
 	   res.end();
    });
 }); // GetItems
+
+app.get('/GetItems/dates/:startDate/:endDate', function (req, res)
+{
+	nodeLogger('Starting GetItems/date start: startDate='+req.params.startDate+ ' endDate='+req.params.endDate);
+   var startDateParts = req.params.startDate.split('-');
+   var endDateParts = req.params.endDate.split('-');
+
+   var startYear=parseInt(startDateParts[0]);
+   var startMonth=parseInt(startDateParts[1]);
+   var startDay=parseInt(startDateParts[2]);
+
+   var endYear=parseInt(endDateParts[0]);
+   var endMonth=parseInt(endDateParts[1]);
+   var endDay=parseInt(endDateParts[2]);
+
+	var startDate = moment(startYear+"-"+startMonth+"-"+startDay,"YYYY-MM-DD").startOf('day');
+	var endDate = moment(endYear+"-"+endMonth+"-"+endDay,"YYYY-MM-DD").endOf('day');
+
+	nodeLogger('Starting GetItems/date startDate='+startDate.format(DATE_FORMAT)+ ' endDate='+endDate.format(DATE_FORMAT));
+
+	writeJSONHeader(res);
+   var results = {};
+	results['values'] = [];
+	results['returncode']  =  'pass';
+   var db = req.db;
+   var collection = db.get(ITEMS_COLLECTION);
+   
+   if((collection == null) || (collection == undefined)){
+	   results['returncode']  =  'fail';
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+      return;
+   }
+
+	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
+
+   // {created_on: { $gte: start, $lt: end }}
+   collection.find({
+	      "date" : {
+		      $gte: startDate.toDate()
+		      ,$lt: endDate.toDate()
+	      }
+   },{},function(err,docs) {
+		if(err) {
+			nodeLogger("There was an error executing the database query.");
+			res.write('{"returncode" : "fail","message" : '+ITEMS_COLLECTION+'" dates Find Failed"}');
+	      results['returncode']  =  'fail';
+	      results['message']  =  ITEMS_COLLECTION+'  dates Find Failed';
+	      res.write(JSON.stringify(results,null,'\n'));
+			res.end();
+			return;
+		}
+      for (var d in docs) {
+          results['values'].push(docs[d]);
+      }
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+   });
+}); // GetItems/date
 
 app.post('/SaveChanges', function(request, response)
 {
@@ -276,28 +338,3 @@ function writeJSONHeader(res)
         "Content-Type": "application/json\n\n"
     });
 } // writeJSONHeader
-
-function CheckDBConnection(dbConnection,res)
-{
-	if(!dbConnection || (dbConnection == undefined) || dbConnection == null) {
-		nodeLogger("CheckDBConnection: There was an error executing the database connection.");
-		res.write('{"returncode" : "fail","message" : "'+APPLICATION_NAME+' connect Failed","db" :"'+ dbConnection+'"}');
-		res.end();
-		return false;
-	}
-	nodeLogger("CheckDBConnection: DB Connection OK");
-	return true;
-} // CheckDBConnection
-
-function GetCheckCollection(collectionName,dbConnection,res)
-{
-		var collection = dbConnection.collection(collectionName);
-		if(!collection || (collection == undefined)) {
-			nodeLogger('There was an error attaching to '+APPLICATION_NAME+':'+collectionName);
-			res.write('{"returncode" : "fail","message" : "'+APPLICATION_NAME+'".'+collectionName+' missing"}');
-			res.end();
-			return null;
-      }
-      nodeLogger('Collection (' + collectionName + ') OK');
-      return(collection);
-} // GetCheckCollection

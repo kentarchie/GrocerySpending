@@ -5,6 +5,7 @@ MongoDB
 Monk
 ### Node Packages
 npm install --save body-parser
+npm install moment
 ### CSS
 jquery-ui.min.css
 jquery-ui-1.8.16.custom.css
@@ -38,3 +39,5 @@ It also supports drag and drop between the tags list and the tags fields on the 
 Working on the backend updating of the changed records.
 ## 6 December 2015
 Rewrote the routes using monk for the Mongo interface. Finally got changed tags to be updated.
+## 11 December 2015
+Add new tags working, new stores added, new items saved.

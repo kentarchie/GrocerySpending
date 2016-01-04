@@ -4,6 +4,7 @@ var DB_STORE = 'store';
 var DB_ITEM  = 'item';
 var DB_PRICE = 'price';
 var DB_TAGS  = 'tags';
+var DATE_FORMAT = 'D MMM YYYY';
 var DB_FIELDS = [DB_ID,DB_DATE,DB_STORE,DB_ITEM,DB_PRICE,DB_TAGS];
 var UPDATE_INTERVAL=2;
 
@@ -24,7 +25,7 @@ $(document).ready(function() {
    logger('init: START ');
 
    $('#tab-container').easytabs();
-   $('#newDate').val(moment().format('YYYY-MM-DD'));
+   $('#newDate').val(moment().format(DATE_FORMAT));
     
    jQuery('#newDate').datetimepicker({
       format:'Y-m-d',
@@ -243,7 +244,7 @@ function makeTable(data)
     for(var row=0,rowL=data.length; row<rowL; ++row) {
         var dValue = data[row];
         outList.push('<tr>');
-        outList.push('<td>'+dValue[DB_DATE]+'</td>');
+        outList.push('<td>'+moment(dValue[DB_DATE]).format(DATE_FORMAT)+'</td>');
         outList.push('<td>'+dValue[DB_STORE]+'</td>');
         outList.push('<td>'+dValue[DB_ITEM]+'</td>');
         outList.push('<td>'+dValue[DB_PRICE]+'</td>');
