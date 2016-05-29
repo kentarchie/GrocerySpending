@@ -131,6 +131,41 @@ function getStores()
     });
 } // getStores
 
+function tagChanged(ev, ui)
+{
+     var here = $(this);
+     here.css('background-color',CHANGED_COLOR);
+     var newTag = ui.draggable.text(); // what got dropped
+     var oldTags = here.text().replace('Tags','');
+
+     var row = here.attr('data-row');
+     if(oldTags.indexOf(newTag) != -1) {
+         here.css('background-color', BASE_COLOR);
+         return;  // duplicated tag
+     }
+     var sep = (oldTags.length == 0) ? '' : ',';
+     var updatedTags = oldTags + sep + newTag;
+
+     here.html(updatedTags);
+     here.trigger('CellChange',[ev,ui]);
+
+     if(row != undefined) {
+        RecordsChanged = true;
+        NumRecordsChanged++;
+        for(var r=0,rL=ItemData.length; r<rL; ++r) {
+           if(ItemData[r][DB_ID] == row) {
+              ItemData[r][DB_TAGS] = updatedTags;
+              ItemData[r].changed = true;
+              here.css('background-color', CHANGING_COLOR);
+              break;
+           }
+        }
+        if(NumRecordsChanged > UPDATE_INTERVAL) {
+           saveChanges();
+        }
+     }
+} // tagChanged
+
 function getItems()
 {
     logger('getItems: started');
@@ -150,39 +185,7 @@ function getItems()
                getStores();
                getTags();
                $("#itemsTbody td:nth-child(5),.tagDrop").droppable({
-                     drop: function (ev, ui) {
-                        var here = $(this);
-                        here.css('background-color',CHANGED_COLOR);
-                        var newTag = ui.draggable.text(); // what got dropped
-                        var oldTags = here.text().replace('Tags','');
-
-                        var row = here.attr('data-row');
-                        if(oldTags.indexOf(newTag) != -1) {
-                            here.css('background-color', BASE_COLOR);
-                            return;  // duplicated tag
-                        }
-                        var sep = (oldTags.length == 0) ? '' : ',';
-                        var updatedTags = oldTags + sep + newTag;
-
-                        here.html(updatedTags);
-                        here.trigger('CellChange',[ev,ui]);
-
-                        if(row != undefined) {
-                           RecordsChanged = true;
-                           NumRecordsChanged++;
-                           for(var r=0,rL=ItemData.length; r<rL; ++r) {
-                              if(ItemData[r][DB_ID] == row) {
-                                 ItemData[r][DB_TAGS] = updatedTags;
-                                 ItemData[r].changed = true;
-                                 here.css('background-color', CHANGING_COLOR);
-                                 break;
-                              }
-                           }
-                           if(NumRecordsChanged > UPDATE_INTERVAL) {
-                              saveChanges();
-                           }
-                        }
-                     }
+                   drop:  tagChanged
                   });
             }
             else {
@@ -265,7 +268,7 @@ function makeTable(data)
 
 function saveChanges()
 {
-    var data={};
+    var saveData={};
     var changedRecords = [];
     for(var r=0,rL=ItemData.length; r<rL; ++r) {
        var thisItem = ItemData[r];
@@ -274,19 +277,21 @@ function saveChanges()
            for ( var i = 0, l = DB_FIELDS.length; i < l; ++i ) {
                changedItem[DB_FIELDS[i]]  = thisItem[DB_FIELDS[i]];
            }
+           changedItem[DB_DATE] = '';
            changedRecords.push(changedItem);
        }
     }
-    data['changedRecords'] = changedRecords;
-    //logger('saveChanges: data before send=:'+JSON.stringify(data,null,'\n')+':');
+    saveData['changedRecords'] = changedRecords;
+    //logger('saveChanges: data before send=:'+JSON.stringify(saveData,null,'\n')+':');
+
     $.ajax({
         type: 'POST'
         ,url: '/SaveChanges'
-        ,data: data
+        ,data: saveData
         ,success: function(data)
         {
-            logger('saveChanges: returned raw data = :'+data+':');
-            logger('saveChanges: returned data = :'+JSON.stringify(data,null,'\n')+':');
+            //logger('saveChanges: returned raw data = :'+data+':');
+            //logger('saveChanges: returned data = :'+JSON.stringify(data,null,'\n')+':');
             logger('saveChanges: returncode = :'+data.returncode+':');
             if (data.returncode == 'pass') {
                logger('saveChanges: changed records updated');

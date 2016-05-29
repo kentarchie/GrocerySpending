@@ -132,19 +132,11 @@ app.get('/GetItems', function (req, res)
 app.get('/GetItems/dates/:startDate/:endDate', function (req, res)
 {
 	nodeLogger('Starting GetItems/date start: startDate='+req.params.startDate+ ' endDate='+req.params.endDate);
-   var startDateParts = req.params.startDate.split('-');
-   var endDateParts = req.params.endDate.split('-');
+   var startMoment = makeDate(req.params.startDate);
+   var endMoment = makeDate(req.params.endDate);
 
-   var startYear=parseInt(startDateParts[0]);
-   var startMonth=parseInt(startDateParts[1]);
-   var startDay=parseInt(startDateParts[2]);
-
-   var endYear=parseInt(endDateParts[0]);
-   var endMonth=parseInt(endDateParts[1]);
-   var endDay=parseInt(endDateParts[2]);
-
-	var startDate = moment(startYear+"-"+startMonth+"-"+startDay,"YYYY-MM-DD").startOf('day');
-	var endDate = moment(endYear+"-"+endMonth+"-"+endDay,"YYYY-MM-DD").endOf('day');
+	var startDate = startMoment.startOf('day');
+	var endDate = endMoment.endOf('day');
 
 	nodeLogger('Starting GetItems/date startDate='+startDate.format(DATE_FORMAT)+ ' endDate='+endDate.format(DATE_FORMAT));
 
@@ -187,6 +179,55 @@ app.get('/GetItems/dates/:startDate/:endDate', function (req, res)
 	   res.end();
    });
 }); // GetItems/date
+
+app.get('/GetStats', function (req, res)
+{
+	nodeLogger('Starting GetStats');
+	writeJSONHeader(res);
+   var results = {};
+	results['values'] = [];
+	results['returncode']  =  'pass';
+   var db = req.db;
+   var collection = db.get(ITEMS_COLLECTION);
+   
+   if((collection == null) || (collection == undefined)){
+	   results['returncode']  =  'fail';
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+      return;
+   }
+
+	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
+   var stats = {};
+   stats['earliestDate'] = moment().now();
+   stats['latestDate'] = moment().now();
+   stats['totalByMonth'] = {};
+   stats['totalByStore'] = {};
+   stats['totalByItem'] = {};
+   stats['totalByTag'] = {};
+
+   collection.find({},{},function(err,docs) {
+		if(err) {
+			nodeLogger("There was an error executing the database query.");
+			res.write('{"returncode" : "fail","message" : '+ITEMS_COLLECTION+'"Find Failed"}');
+	      results['returncode']  =  'fail';
+	      results['message']  =  ITEMS_COLLECTION+' Find Failed';
+	      res.write(JSON.stringify(results,null,'\n'));
+			res.end();
+			return;
+		}
+      for (var d in docs) {
+          results['values'].push(docs[d]);
+          var date = makeDate(d[DB_DATE]);
+          var store = d[DB_STORE];
+          var item = d[DB_ITEM];
+          var price = d[DB_PRICE];
+          var tags = d[DB_TAGS].split(',');
+      }
+	   res.write(JSON.stringify(results,null,'\n'));
+	   res.end();
+   });
+}); // GetStats
 
 app.post('/SaveChanges', function(request, response)
 {
@@ -297,11 +338,12 @@ app.post('/AddItem', function(request, response)
 	nodeLogger(ITEMS_COLLECTION + " found, collection OK");
 
    var newDate = request.body.newDate;
+   nodeLogger('AddItem: passed in date ' + newDate);
    var newStore = request.body.newStore;
    var newItem = request.body.newItem;
    var newPrice = request.body.newPrice;
    var newTags = request.body.newTags;
-	results['date'] = newDate;
+	results['date'] = moment(newDate).format(DATE_FORMAT);
 	results['store'] = newStore;
 	results['item'] = newItem;
 	results['price'] = newPrice;
@@ -315,6 +357,10 @@ app.post('/AddItem', function(request, response)
           ,'tags'  : newTags
       };
    nodeLogger('AddItem: saving ' + JSON.stringify(newDocument,null,'\n'));
+	response.write(JSON.stringify(results,null,'\n'));
+	response.end();
+   return;
+
    try {
       var addItem = collection.insert(newDocument);
    }
@@ -327,6 +373,13 @@ app.post('/AddItem', function(request, response)
 	response.end();
 }); //AddItem
            
+function makeDate(dateStr)
+{
+	nodeLogger('makeDate: dateStr='+dateStr);
+   var dateParts = dateStr.split('-');
+	return(moment(parseInt(dateParts[0])+"-"+parseInt(dateParts[1])+"-"+parseInt(dateParts[2]),"YYYY-MM-DD"));
+} //makeDate
+
 function nodeLogger(str)
 {
     console.log('NL: ' + str);

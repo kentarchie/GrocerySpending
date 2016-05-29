@@ -41,3 +41,5 @@ Working on the backend updating of the changed records.
 Rewrote the routes using monk for the Mongo interface. Finally got changed tags to be updated.
 ## 11 December 2015
 Add new tags working, new stores added, new items saved.
+##3 January 2016
+Using proper dates in records, search by date range working
