@@ -1,2 +1,8 @@
-insert file of items into a collection
-mongoimport --db GrocerySpending --collection Items --drop --file purchases.json
+#insert file of items into a collection
+mongoimport --db GrocerySpending --collection Items --drop --file ItemsNewDate.json
+
+#insert file of tags and such into a collection
+mongoimport --db GrocerySpending --collection NameValues --drop --file NameValues.json
+
+# start mongo using local server
+mongo -host localhost --port 27017 GrocerySpending

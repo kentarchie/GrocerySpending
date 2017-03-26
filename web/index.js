@@ -7,7 +7,7 @@ var express  = require("express")
    ,path = require('path')
 	,fs = require("fs");
 
-var NV_COLLECTION = 'NameValue';
+var NV_COLLECTION = 'NameValues';
 var ITEMS_COLLECTION = 'Items';
 var DB_ID    = '_id';
 var DB_DATE  = 'date';
@@ -22,7 +22,7 @@ var APPLICATION_NAME = 'GrocerySpending';
 var MongoClient = mongodb.MongoClient;
 var DB = monk('localhost:27017/'+APPLICATION_NAME);
 moment().format();
-	
+
 var app = express();
 var URI = "mongodb://localhost:27017/" + APPLICATION_NAME;
 
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 app.use(function(req,res,next){
     req.db = DB;
     next();
@@ -57,38 +57,43 @@ app.get('/GetValues/:requestedName', function (req, res)
 	var requestedName=req.params.requestedName;
 	nodeLogger('Starting GetValues requestedName='+requestedName);
 	writeJSONHeader(res);
-   var results = {};
+	var results = {};
 	results['values'] = [];
 	results['returncode']  =  'pass';
    var db = req.db;
    var collection = db.get(NV_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
 	   res.end();
-      return;
+	   return;
    }
 
-	nodeLogger(NV_COLLECTION + " found, collection OK");
+   nodeLogger(NV_COLLECTION + " found, collection OK");
+   collection.count({},function(err, count) {
+   		console.log("collection count = "+count);
+	});
+   	nodeLogger("after collection count");
 
    collection.find({},{},function(err,docs) {
 		if(err) {
 			nodeLogger("There was an error executing the database query.");
 			res.write('{"returncode" : "fail","message" : '+NV_COLLECTION+'"Find Failed"}');
-	      results['returncode']  =  'fail';
-	      results['message']  =  NV_COLLECTION+' Find Failed';
-	      res.write(JSON.stringify(results,null,'\n'));
+			results['returncode']  =  'fail';
+			results['message']  =  NV_COLLECTION+' Find Failed';
+			res.write(JSON.stringify(results,null,'\n'));
 			res.end();
 			return;
 		}
-      for (var d in docs) {
+   		nodeLogger("docs length :"+docs.length);
+      	for (var d in docs) {
 		   if(docs[d]['name'] == requestedName) {
             results['values'].push(docs[d]['value']);
          }
       }
-	   res.write(JSON.stringify(results,null,'\n'));
-	   res.end();
+	  res.write(JSON.stringify(results,null,'\n'));
+	  res.end();
    });
 }); // GetValues
 
@@ -101,7 +106,7 @@ app.get('/GetItems', function (req, res)
 	results['returncode']  =  'pass';
    var db = req.db;
    var collection = db.get(ITEMS_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -146,7 +151,7 @@ app.get('/GetItems/dates/:startDate/:endDate', function (req, res)
 	results['returncode']  =  'pass';
    var db = req.db;
    var collection = db.get(ITEMS_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -189,7 +194,7 @@ app.get('/GetStats', function (req, res)
 	results['returncode']  =  'pass';
    var db = req.db;
    var collection = db.get(ITEMS_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -237,7 +242,7 @@ app.post('/SaveChanges', function(request, response)
 	 results['returncode']  =  'pass';
     var db = request.db;
     var collection = db.get(ITEMS_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -250,7 +255,7 @@ app.post('/SaveChanges', function(request, response)
    var requestBody = request.body;
    nodeLogger('changedRecords length = ' + requestBody.changedRecords.length);
 	results['recordsChanged'] = requestBody.changedRecords.length;
-	for(var i=0,il=requestBody.changedRecords.length; i<il; ++i) 
+	for(var i=0,il=requestBody.changedRecords.length; i<il; ++i)
    {
 	   nodeLogger('Updating record '+ i);
       var rec = requestBody.changedRecords[i];
@@ -292,7 +297,7 @@ app.post('/AddNameValue', function(request, response)
 	 results['returncode']  =  'pass';
     var db = request.db;
     var collection = db.get(NV_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -328,7 +333,7 @@ app.post('/AddItem', function(request, response)
 	 results['returncode']  =  'pass';
     var db = request.db;
     var collection = db.get(ITEMS_COLLECTION);
-   
+
    if((collection == null) || (collection == undefined)){
 	   results['returncode']  =  'fail';
 	   res.write(JSON.stringify(results,null,'\n'));
@@ -372,7 +377,7 @@ app.post('/AddItem', function(request, response)
 	response.write(JSON.stringify(results,null,'\n'));
 	response.end();
 }); //AddItem
-           
+
 function makeDate(dateStr)
 {
 	nodeLogger('makeDate: dateStr='+dateStr);
@@ -388,6 +393,6 @@ function nodeLogger(str)
 function writeJSONHeader(res)
 {
 	res.writeHead(200, {
-        "Content-Type": "application/json\n\n"
+        "Content-Type": "application/json"
     });
 } // writeJSONHeader
